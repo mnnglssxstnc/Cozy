@@ -44,6 +44,8 @@ regBut.forEach((elem) =>
                     .querySelector("input")
                     .classList.remove("error-box");
             }
+            return regexName.test(inputName.value);
+
         }
         //function to check the correctness of the entered phone number
         function checkPhone() {
@@ -102,13 +104,9 @@ regBut.forEach((elem) =>
         checkPhone();
         checkPassword();
         //opening a second window after successful validation
-        if (checkName() && checkPhone() && checkPassword()) {
-            isFormValid = true;
-            modalOverlay.style.display = "block";
-            secondModal.style.display = "flex";
-            document.getElementById("registration-form").style.display =
-                "none";
-            scrollControllerModal.disabledScroll();
+        if (checkName() && checkPhone()) {
+            window.location.href="page_1_signet.html";
+console.log('ppppp');
         }
     })
 );
@@ -128,3 +126,15 @@ document.addEventListener("DOMContentLoaded", function () {
         return input.replace(regex, "");
     }
 });
+
+function openForm(){
+    window.location.href="index.html";
+    console.log('ok');
+}
+
+document.querySelectorAll('.open-form').forEach(elem => {
+    elem.addEventListener("click", () => {
+        window.location.href="index.html";
+
+    })
+})

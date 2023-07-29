@@ -1,6 +1,6 @@
 
 body {
-  background: url("./images/background.png") 0px 0px no-repeat;
+  background: url("../images/background.png") 0px 0px no-repeat;
   background-size: contain;
   font-size: 16px;
   max-width: 1024px;
@@ -59,4 +59,8 @@ header {
 .data {
   font-size: 12px;
   margin: 0;
+}
+
+.open-form{
+    cursor: pointer;
 }
