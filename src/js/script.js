@@ -138,3 +138,10 @@ document.querySelectorAll('.open-form').forEach(elem => {
 
     })
 })
+
+document.querySelectorAll('.open-info').forEach(elem => {
+    elem.addEventListener("click", () => {
+        window.location.href="questions.html";
+
+    })
+})
