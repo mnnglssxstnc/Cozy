@@ -1,3 +1,4 @@
+`use strict`;
 jQuery(document).ready(function () {
     jQuery(".phone-number").inputmask({
         mask: "+38 (999) 999-99-99",
@@ -5,6 +6,8 @@ jQuery(document).ready(function () {
     });
 });
 const regBut = document.querySelectorAll(".check-form");
+
+let isReg = false;
 
 regBut.forEach((elem) =>
     elem.addEventListener("click", (event) => {
@@ -44,6 +47,8 @@ regBut.forEach((elem) =>
                     .querySelector("input")
                     .classList.remove("error-box");
             }
+            return regexName.test(inputName.value);
+
         }
         //function to check the correctness of the entered phone number
         function checkPhone() {
@@ -102,16 +107,28 @@ regBut.forEach((elem) =>
         checkPhone();
         checkPassword();
         //opening a second window after successful validation
-        if (checkName() && checkPhone() && checkPassword()) {
-            isFormValid = true;
-            modalOverlay.style.display = "block";
-            secondModal.style.display = "flex";
-            document.getElementById("registration-form").style.display =
-                "none";
-            scrollControllerModal.disabledScroll();
+        if (checkName() && checkPhone()) {
+            isReg = true;
+            window.location.href = "page_1.html";
+          
+                isReg = true;
+                localStorage.setItem('isReg', true);
+              
+            console.log('работает');
+
         }
+
+
     })
 );
+const storedIsReg = localStorage.getItem('isReg');
+if (storedIsReg !== null) {
+  isReg = JSON.parse(storedIsReg); // Предполагается, что isReg это булевая переменная
+} else {
+  // Если значение не установлено в localStorage, инициализируем его значением по умолчанию (в данном случае, false)
+  isReg = false;
+  localStorage.setItem('isReg', false);
+}
 document.addEventListener("DOMContentLoaded", function () {
     let clientInputs = document.querySelectorAll('input[class="input-name"]');
     clientInputs.forEach(function (input) {
@@ -122,9 +139,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 input.value = sanitizedValue;
             }
         });
+        
     });
     function sanitizeInput(input) {
         let regex = /[^a-zA-Zа-яА-ЯїЇєЄіІґҐ'-]/g;
         return input.replace(regex, "");
     }
+    
 });
+function openReg(){
+    window.location.href = "index.html";
+
+}
+
+
+    document.querySelectorAll('.if-reg').forEach(elem => {
+        elem.addEventListener("click", () => {
+            window.location.href = "index.html";
+            const savedIsReg = localStorage.getItem('isReg');
+            if (savedIsReg === 'true') {
+                isReg = true;
+            }
+        })
+    })
+
+
+
+

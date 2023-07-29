@@ -1,6 +1,6 @@
 
 body {
-  background: url("./images/background.png") 0px 0px no-repeat;
+  background: url("../images/background.png") 0px 0px no-repeat;
   background-size: contain;
   font-size: 16px;
 }
@@ -40,4 +40,8 @@ header {
 }
 .data {
   font-size: 14px;
+}
+
+.if-reg{
+    cursor: pointer;
 }
