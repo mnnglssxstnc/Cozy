@@ -10,7 +10,8 @@
     padding: 30px 0 70px 0;
 
     border-radius: 20px;
-    width: 100%;
+    width: 1024px;
+    margin: 0 auto;
     height: 600px;
     background-color: #F9F5FF;
 }
@@ -64,7 +65,7 @@
 }
 
 #our-form .registration-form button {
-    width: 200px;
+    width: 240px;
     height: 50px;
     background-color: rgba(115, 27, 235, 0.51);
     border: none;
@@ -84,7 +85,7 @@
 }
 
 #our-form .registration-form button:hover {
-    background-color: rgba(59, 7, 132, 0.51);
+    background-color: rgba(68, 7, 252, 0.51);
 }
 
 #our-form .registration-form .input-wrapper input:focus {
