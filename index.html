@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -9,7 +11,31 @@
 </head>
 
 <body>
-   
+    <div id="our-form">
+        <h1> JuniFind</h1>
+        <span>Корисна платформа підготовки для твоєї first job</span>
+        <form class="registration-form" id="registration-form2">
+            <div class="input-wrapper">
+                <input class="input-name" maxlength="15" type="text" name="first_name" placeholder="Им'я*" value="">
+                <p class="error-text"></p>
+            </div>
+            <div class="input-wrapper">
+                <input class="phone-number" type="text" name="phone" placeholder="Телефон*" value="">
+                <p class="error-text"></p>
+            </div>
+            <div class="input-wrapper">
+                <input class="input-password" maxlength="15" type="password"  placeholder="Пароль*" value="">
+                <p class="error-text"></p>
+            </div>
+            <button id="open-second-modal" class="check-form" type="submit">
+                <p>Зареєструватися </p>
+            </button>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
       <script src="src/js/script.js"></script>
 </body>
 
