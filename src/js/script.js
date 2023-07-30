@@ -139,9 +139,7 @@ document.querySelectorAll('.open-form').forEach(elem => {
     })
 })
 
-document.querySelectorAll('.open-info').forEach(elem => {
-    elem.addEventListener("click", () => {
-        window.location.href="questions.html";
 
-    })
+document.getElementById('isCompany').addEventListener("click", () => {
+    window.location.href="page_2.html"
 })

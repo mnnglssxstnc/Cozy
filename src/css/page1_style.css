@@ -67,5 +67,6 @@ header {
 
 .open-info{
     cursor: pointer;
+    text-decoration: none;
 
 }
