@@ -128,13 +128,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function openForm(){
-    window.location.href="index.html";
+    window.location.href="page_1.html";
     console.log('ok');
 }
 
 document.querySelectorAll('.open-form').forEach(elem => {
     elem.addEventListener("click", () => {
-        window.location.href="index.html";
+        window.location.href="page_1.html";
 
     })
 })
