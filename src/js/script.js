@@ -5,7 +5,7 @@ jQuery(document).ready(function () {
     });
 });
 const regBut = document.querySelectorAll(".check-form");
-
+let userName="";
 regBut.forEach((elem) =>
     elem.addEventListener("click", (event) => {
         //function that prevents the transition to the next action
@@ -43,7 +43,10 @@ regBut.forEach((elem) =>
                     .closest(".input-wrapper")
                     .querySelector("input")
                     .classList.remove("error-box");
+                    userName=inputName.value;
+
             }
+            // userName=inputName.value;
             return regexName.test(inputName.value);
 
         }
@@ -106,7 +109,9 @@ regBut.forEach((elem) =>
         //opening a second window after successful validation
         if (checkName() && checkPhone()) {
             window.location.href="page_1_signet.html";
-console.log('ppppp');
+            console.log(`userName = ${userName}`);
+
+            document.getElementById('text-name').innerText = "Hello";
         }
     })
 );
@@ -139,7 +144,7 @@ document.querySelectorAll('.open-form').forEach(elem => {
     })
 })
 
-
-document.getElementById('isCompany').addEventListener("click", () => {
+function isCompany(){
     window.location.href="page_2.html"
-})
+
+}
