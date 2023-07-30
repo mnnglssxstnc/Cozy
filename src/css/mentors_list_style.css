@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+body li {
+    list-style: none;
+}
+
 header {
     max-width: 1024px;
     margin: 0 auto;
