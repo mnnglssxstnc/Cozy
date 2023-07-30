@@ -3,6 +3,62 @@
     padding: 0px;
 }
 
+.mt-lg-0 {
+    margin: 0 auto !important;
+}
+
+.avatar {
+width: 40px;
+height: 40px;
+}
+
+.avtor {
+display: flex;
+gap:5px;
+}
+
+.avatar-wraper {
+display: flex;
+flex-direction: column;
+}
+.data {
+font-size: 12px;
+margin: 0;
+}
+
+.open-form{
+    cursor: pointer;
+}
+
+.open-info{
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+.conteiner{
+    position: relative;
+}
+
+#user-name{
+  margin-top: 7px;
+  margin-right: 5px;
+}
+#user-name span{
+    color: #0D6EFD;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+}
+#user-name img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid rgba(115, 27, 235, 0.51);
+}
+
 #our-form {
     display: flex;
     flex-direction: column;
